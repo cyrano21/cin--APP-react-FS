@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { GenreContext } from "./GenreContext";
-const key = import.meta.env.VITE_REACT_APP_KEY;
+// Utilisation directe de la clé API au lieu de la variable d'environnement
+const key = "6138da7bfb774afb2ed1bef02f05ff66";
 
 export const useMovieData = () => {
   const { genres } = useContext(GenreContext);
