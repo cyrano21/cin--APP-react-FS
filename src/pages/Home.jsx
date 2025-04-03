@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Cards from "../components/Cards";
 import Form from "../components/Form";
-import { useMovieData } from "../components/UseMovieData";
+import { useMovieData } from "../components/useMovieData";
 
 const Home = () => {
   const { sortedMovies, genres, setSearch, SortAscending, SortDescending } =
