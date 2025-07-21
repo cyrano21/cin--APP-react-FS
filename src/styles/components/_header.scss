@@ -1,4 +1,5 @@
 @use '../settings' as *;
+@use 'sass:color';
 
 .header {
   padding: 20px 0;
@@ -41,7 +42,7 @@
         background: $color-1;
 
         &:hover {
-          background: darken($color-1, 10%);
+          background: color.adjust($color-1, $lightness: -10%);
         }
       }
     }

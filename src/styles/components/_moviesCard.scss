@@ -1,4 +1,5 @@
 @use '../settings' as *;
+@use 'sass:color';
 
 .result {
   display: grid;
@@ -73,7 +74,7 @@
     margin-top: auto; // Push button to the bottom
 
     &:hover {
-      background: darken($color-1, 10%);
+      background: color.adjust($color-1, $lightness: -10%);
     }
   }
 }

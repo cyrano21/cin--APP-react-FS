@@ -1,6 +1,9 @@
+@use '../settings' as *;
+@use 'sass:color';
+
 .popular-movies-container {
   padding: 20px;
-  background-color: darken($color-2, 5%);
+  background-color: color.adjust($color-2, $lightness: -5%);
 
   h2 {
     text-align: center;
