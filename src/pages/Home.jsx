@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Cards from "../components/Cards";
 import Form from "../components/Form";
 import { useMovieData } from "../components/useMovieData";
-import { getPopularMovies } from "../services/tmdb";
+import { getPopularMovies } from "../services/api";
 import PopularMovieCard from "../components/PopularMovieCard";
 import "../styles/components/_popularMovies.scss";
 

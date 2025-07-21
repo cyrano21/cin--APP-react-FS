@@ -1,12 +1,12 @@
 import React from "react";
-import { getImageUrl } from "../services/tmdb";
 
 const PopularMovieCard = ({ movie }) => {
+  // OMDb uses "Poster", "Title", and "Year"
   return (
     <div className="popular-movie-card">
-      <img src={getImageUrl(movie.poster_path)} alt={movie.title} />
-      <h3>{movie.title}</h3>
-      <p>Date de sortie: {movie.release_date}</p>
+      <img src={movie.Poster} alt={movie.Title} />
+      <h3>{movie.Title}</h3>
+      <p>Année de sortie: {movie.Year}</p>
     </div>
   );
 };
