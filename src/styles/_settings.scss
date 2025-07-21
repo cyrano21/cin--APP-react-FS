@@ -26,21 +26,25 @@ $white: rgb(238, 238, 238);
 body {
   background: $color-2;
   color: $white;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
+
 li {
   list-style: none;
 }
+
 .result {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0 10px; /* Add some padding on mobile */
 }
+
 .card-container {
   display: flex;
-  flex: 1 0 25%;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  width: 100%;
 }
 .user-list-page {
   > h2 {

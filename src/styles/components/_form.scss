@@ -1,85 +1,62 @@
 @use '../settings' as *;
 
 .form-component {
+  padding: 20px 0;
+
   .form-container {
     text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
   
   form {
-    inline-size: 300px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
 
     input[type="text"] {
-      padding: 1px 10px;
-      border-radius: 10px 10px 0 0;
+      padding: 10px;
+      border-radius: 8px;
       border: none;
-      font-size: 1.5rem;
-      display: block;
-      margin: 0 auto;
-      inline-size: 220px;
+      font-size: 1.2rem;
+      width: 100%;
       outline: none;
       text-align: center;
     }
     
     input[type="submit"] {
-      padding: 1px 10px;
-      inline-size: 220px;
-      border-radius: 0 0 10px 10px;
+      padding: 12px;
+      border-radius: 8px;
       border: none;
       background: $color-1;
       color: $white;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       cursor: pointer;
-      z-index: 10;
-      position: relative;
+      transition: background 0.3s;
 
       &:hover {
-        background: $black;
+        background: darken($color-1, 10%);
       }
     }
   }
   
   .btn-sort-container {
-    margin: 8px auto;
-    inline-size: 220px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     cursor: pointer;
+    gap: 10px;
 
-    #goodToBad {
-      border-radius: 10px 0 0 10px;
-    }
-    
-    #badToGood {
-      border-radius: 0 10px 10px 0;
-    }
-    
-    #goodToBad,
-    #badToGood {
+    div {
       background: $color-1;
-      inline-size: 110px;
-      transition: 0.3s;
-      position: relative;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background 0.3s;
 
       &:hover {
-        background: $black;
+        background: darken($color-1, 10%);
       }
-    }
-    
-    #goodToBad span {
-      transform: translateY(-50%) rotate(-90deg);
-      inset-inline-end: 18px;
-    }
-    
-    #badToGood span {
-      transform: translateY(-50%) rotate(90deg);
-      inset-inline-start: 16px;
-    }
-    
-    #goodToBad span,
-    #badToGood span {
-      position: absolute;
-      top: 50%;
     }
   }
 }
